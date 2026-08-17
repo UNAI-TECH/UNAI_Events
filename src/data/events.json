@@ -1,0 +1,200 @@
+[
+  {
+    "id": "unai-001",
+    "title": "William Smith Comedy Show",
+    "subtitle": "Crack a Smile — 2026 World Tour",
+    "category": "Comedy",
+    "date": "2026-08-27",
+    "display_date": {
+      "month": "AUG",
+      "day": "27",
+      "time": "7:00 PM",
+      "year": "2026"
+    },
+    "time": "7:00 PM",
+    "duration": "120 Mins",
+    "language": "English / Hindi",
+    "age_limit": "16+",
+    "venue": "Royal Opera Auditorium, City Center",
+    "city": "Mumbai",
+    "price_starting": "₹499",
+    "image_url": "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail_url": "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=600&q=80",
+    "bookmyshow_url": "https://in.bookmyshow.com/events/william-smith-comedy-live/ET00312345",
+    "featured": true,
+    "hero_spotlight": true,
+    "status": "Booking Open",
+    "description": "Get ready for an electrifying evening of high-octane laughter as international stand-up sensation William Smith brings his critically acclaimed 'Crack a Smile' world tour to UNAI Events. An unmissable blend of wit, storytelling, and sharp observational humor.",
+    "highlights": ["Live Standup Special", "Celebrity Opening Acts", "Exclusive VIP Lounge Access"],
+    "ticket_tiers": [
+      { "name": "Silver Seating", "price": "₹499", "status": "Available" },
+      { "name": "Gold Premium", "price": "₹999", "status": "Filling Fast" },
+      { "name": "VIP Platinum Front Row", "price": "₹1,999", "status": "Limited" }
+    ]
+  },
+  {
+    "id": "unai-002",
+    "title": "Shannon Weigel Acoustic Night",
+    "subtitle": "Tour: Love Me As I Love You",
+    "category": "Concert",
+    "date": "2026-08-28",
+    "display_date": {
+      "month": "AUG",
+      "day": "28",
+      "time": "8:30 PM",
+      "year": "2026"
+    },
+    "time": "8:30 PM",
+    "duration": "150 Mins",
+    "language": "English",
+    "age_limit": "All Ages",
+    "venue": "The Grand Symphony Hall",
+    "city": "Bengaluru",
+    "price_starting": "₹799",
+    "image_url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail_url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80",
+    "bookmyshow_url": "https://in.bookmyshow.com/events/shannon-weigel-acoustic-live/ET00312346",
+    "featured": true,
+    "hero_spotlight": true,
+    "status": "Booking Open",
+    "description": "Experience an intimate acoustic evening under ambient candlelight with the soulful vocals and guitar melodies of Shannon Weigel. Featuring original tracks from her hit album alongside reworked indie classics in an acoustic paradise.",
+    "highlights": ["Candlelight Stage Setting", "Acoustic Solo & Trio Band", "Meet & Greet Add-on Available"],
+    "ticket_tiers": [
+      { "name": "Balcony Tier", "price": "₹799", "status": "Available" },
+      { "name": "Stalls Central", "price": "₹1,499", "status": "Available" },
+      { "name": "Front Stage Experience", "price": "₹2,499", "status": "Selling Fast" }
+    ]
+  },
+  {
+    "id": "unai-003",
+    "title": "The Lewistage Hamlet by William Shakespeare",
+    "subtitle": "The Lewistage Theatre Drama Group",
+    "category": "Theatre",
+    "date": "2026-08-29",
+    "display_date": {
+      "month": "AUG",
+      "day": "29",
+      "time": "8:00 PM",
+      "year": "2026"
+    },
+    "time": "8:00 PM",
+    "duration": "160 Mins",
+    "language": "English",
+    "age_limit": "12+",
+    "venue": "National Performing Arts Center",
+    "city": "New Delhi",
+    "price_starting": "₹599",
+    "image_url": "https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail_url": "https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&w=600&q=80",
+    "bookmyshow_url": "https://in.bookmyshow.com/events/hamlet-lewistage-theatre/ET00312347",
+    "featured": true,
+    "hero_spotlight": false,
+    "status": "Booking Open",
+    "description": "A modern, gripping revival of Shakespeare's timeless masterpiece Hamlet. Produced with lavish period staging, dramatic orchestral accompaniment, and an award-winning ensemble cast exploring passion, revenge, and destiny.",
+    "highlights": ["Lavish Set Design", "Live Orchestral Score", "Award-winning Cast Ensemble"],
+    "ticket_tiers": [
+      { "name": "Rear Tier", "price": "₹599", "status": "Available" },
+      { "name": "Executive Circle", "price": "₹1,199", "status": "Available" },
+      { "name": "Royal Box", "price": "₹2,999", "status": "Almost Full" }
+    ]
+  },
+  {
+    "id": "unai-004",
+    "title": "Edward Burgess — Sax on the Beach",
+    "subtitle": "Classical Summer Tour — 2026",
+    "category": "Concert",
+    "date": "2026-08-30",
+    "display_date": {
+      "month": "AUG",
+      "day": "30",
+      "time": "8:00 PM",
+      "year": "2026"
+    },
+    "time": "8:00 PM",
+    "duration": "130 Mins",
+    "language": "Instrumental",
+    "age_limit": "All Ages",
+    "venue": "Seaside Amphitheatre Promenade",
+    "city": "Goa",
+    "price_starting": "₹899",
+    "image_url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail_url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
+    "bookmyshow_url": "https://in.bookmyshow.com/events/edward-burgess-sax-live/ET00312348",
+    "featured": true,
+    "hero_spotlight": true,
+    "status": "Booking Open",
+    "description": "Smooth jazz, breezy sax grooves, and sunset rhythms. Master saxophonist Edward Burgess headlines an open-air coastal concert blending contemporary jazz, funk fusion, and timeless summer instrumentals.",
+    "highlights": ["Open-Air Coastal Ambience", "Sunset Cocktail Hour", "Improvisational Jazz Jams"],
+    "ticket_tiers": [
+      { "name": "General Lawn", "price": "₹899", "status": "Available" },
+      { "name": "VIP Deck Seating", "price": "₹1,799", "status": "Available" },
+      { "name": "Cabana Lounge Table (4 Pax)", "price": "₹6,999", "status": "Exclusive" }
+    ]
+  },
+  {
+    "id": "unai-005",
+    "title": "Cinderella — The Little Glass Slipper",
+    "subtitle": "The Broadway Fairy Tale Musical Extravaganza",
+    "category": "Theatre",
+    "date": "2026-09-01",
+    "display_date": {
+      "month": "SEP",
+      "day": "01",
+      "time": "8:00 PM",
+      "year": "2026"
+    },
+    "time": "8:00 PM",
+    "duration": "140 Mins",
+    "language": "English",
+    "age_limit": "Family / Kids Welcome",
+    "venue": "Starlight Grand Theatre",
+    "city": "Chennai",
+    "price_starting": "₹699",
+    "image_url": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail_url": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=600&q=80",
+    "bookmyshow_url": "https://in.bookmyshow.com/events/cinderella-musical-extravaganza/ET00312349",
+    "featured": true,
+    "hero_spotlight": false,
+    "status": "Booking Open",
+    "description": "Bring the entire family to witness fairy tale magic brought alive on stage. Featuring stunning enchanted illusions, sparkling original costumes, breathtaking stagecraft, and beloved show tunes.",
+    "highlights": ["Spectacular Stage Illusions", "Family & Kid Friendly", "Special Photo Opportunities"],
+    "ticket_tiers": [
+      { "name": "Balcony Family", "price": "₹699", "status": "Available" },
+      { "name": "Orchestra Stalls", "price": "₹1,299", "status": "Available" },
+      { "name": "Magic Circle Premium", "price": "₹2,199", "status": "Selling Fast" }
+    ]
+  },
+  {
+    "id": "unai-006",
+    "title": "The Queen's Symphony & Tribute Orchestra",
+    "subtitle": "50-Piece Orchestra Playing Iconic Rock Hits",
+    "category": "Concert",
+    "date": "2026-09-05",
+    "display_date": {
+      "month": "SEP",
+      "day": "05",
+      "time": "7:30 PM",
+      "year": "2026"
+    },
+    "time": "7:30 PM",
+    "duration": "150 Mins",
+    "language": "English",
+    "age_limit": "10+",
+    "venue": "Apex Symphony Hall",
+    "city": "Hyderabad",
+    "price_starting": "₹999",
+    "image_url": "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail_url": "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=600&q=80",
+    "bookmyshow_url": "https://in.bookmyshow.com/events/queens-symphony-rock-tribute/ET00312350",
+    "featured": false,
+    "hero_spotlight": false,
+    "status": "Booking Open",
+    "description": "When classical symphonic majesty meets legendary rock anthems. Experience Bohemian Rhapsody, We Will Rock You, and Somebody to Love performed by a massive 50-piece philharmonic orchestra with guest rock soloists.",
+    "highlights": ["50-Piece Philharmonic Orchestra", "Rock Soloist Collaborations", "Immersive Surround Sound"],
+    "ticket_tiers": [
+      { "name": "Upper Tier", "price": "₹999", "status": "Available" },
+      { "name": "Grand Circle", "price": "₹1,899", "status": "Available" },
+      { "name": "Conductor's Circle", "price": "₹3,499", "status": "Limited" }
+    ]
+  }
+]

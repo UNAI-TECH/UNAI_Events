@@ -1,0 +1,130 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Trust Bar */
+.trustBar {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2rem 0;
+}
+
+.trustContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trustIcon {
+  color: var(--color-sapphire);
+  flex-shrink: 0;
+}
+
+.trustTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: block;
+}
+
+.trustSub {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+/* Callout Section */
+.calloutSection {
+  padding: 5rem 0 6rem 0;
+  background: var(--bg-primary);
+}
+
+.calloutCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.calloutContent {
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.calloutTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-sapphire);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #EFF6FF;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+  border: 1px solid #DBEAFE;
+  width: fit-content;
+  margin-bottom: 1.25rem;
+}
+
+.calloutTitle {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.calloutText {
+  font-size: 0.98rem;
+  color: var(--color-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.calloutBtnRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.calloutImageWrapper {
+  position: relative;
+  min-height: 320px;
+}
+
+.calloutImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .trustContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .calloutCard {
+    grid-template-columns: 1fr;
+  }
+  .calloutContent {
+    padding: 2rem;
+  }
+  .calloutImageWrapper {
+    height: 240px;
+    order: -1;
+  }
+}

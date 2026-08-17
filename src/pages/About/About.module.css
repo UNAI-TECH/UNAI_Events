@@ -1,0 +1,343 @@
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutHero {
+  background: var(--color-primary);
+  background: radial-gradient(circle at 50% 20%, #162B56 0%, #0A1F44 70%, #051024 100%);
+  color: #FFFFFF;
+  padding: 5.5rem 0 6rem 0;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroBadge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+
+/* Stats Section */
+.statsSection {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--color-border);
+  padding: 3rem 0;
+  margin-top: -2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.statCard {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.statNumber {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.statLabel {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Story Section */
+.storySection {
+  padding: 6rem 0;
+  background: #FFFFFF;
+}
+
+.storyContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.storyImageCol {
+  position: relative;
+}
+
+.storyImgMain {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+.storyFloatingBadge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.badgeStar {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.storyFloatingBadge strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+
+.storyFloatingBadge p {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.storyTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionPill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--bg-secondary);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.sectionHeading {
+  font-size: 2.3rem;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.checkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.checkList li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.checkIcon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+/* Pillars Section */
+.pillarsSection {
+  padding: 6rem 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+.pillarsHeader {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.pillarsSub {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.pillarCard {
+  background: #FFFFFF;
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.pillarCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.pillarIconWrapper {
+  width: 54px;
+  height: 54px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.pillarCard:hover .pillarIconWrapper {
+  background: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.pillarTitle {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.pillarDesc {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* About CTA */
+.aboutCta {
+  padding: 5rem 0 6rem 0;
+  background: #FFFFFF;
+}
+
+.ctaBox {
+  background: var(--color-primary);
+  background: radial-gradient(circle at 50% 30%, #162B56 0%, #0A1F44 80%, #051024 100%);
+  color: #FFFFFF;
+  padding: 4.5rem 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-xl);
+}
+
+.ctaHeading {
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.ctaActions .btn-outline {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.ctaActions .btn-outline:hover {
+  background: #FFFFFF;
+  color: var(--color-primary);
+}
+
+@media (max-width: 960px) {
+  .storyContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .storyImgMain {
+    height: 360px;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  .storyFloatingBadge {
+    position: static;
+    margin-top: 1rem;
+  }
+  .ctaBox {
+    padding: 2.5rem 1.5rem;
+  }
+}

@@ -1,0 +1,451 @@
+.carouselWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  user-select: none;
+}
+
+.scheduleBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.dot {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+}
+
+.seasonDates {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.25rem;
+  text-align: center;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* 3D Stage Layout */
+.stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  perspective: 1000px;
+}
+
+/* Side Preview Cards (peeking out like the reference) */
+.sideCard {
+  position: absolute;
+  width: 220px;
+  height: 270px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  opacity: 0.38;
+  filter: blur(1px) brightness(0.7);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.sideCard:hover {
+  opacity: 0.7;
+  filter: blur(0px) brightness(0.95);
+  transform: scale(0.9);
+}
+
+.sideCardLeft {
+  left: 2%;
+  transform: translateX(-15%) scale(0.85);
+}
+
+.sideCardRight {
+  right: 2%;
+  transform: translateX(15%) scale(0.85);
+}
+
+.sideCardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.sideCard:hover .sideCardImg {
+  transform: scale(1.05);
+}
+
+.sideCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 31, 68, 0.95), transparent 70%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.sideCardCategory {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  letter-spacing: 0.1em;
+}
+
+.sideCardTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-top: 0.2rem;
+  line-height: 1.2;
+}
+
+/* Navigation Arrow Buttons */
+.navArrow {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navArrow:hover {
+  background: #FFFFFF;
+  transform: scale(1.12);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+  color: var(--color-gold);
+}
+
+.navArrow:active {
+  transform: scale(0.96);
+}
+
+.navArrowLeft {
+  left: calc(50% - 370px);
+}
+
+.navArrowRight {
+  right: calc(50% - 370px);
+}
+
+/* Active Center Ticket Card */
+.activeTicketCard {
+  position: relative;
+  display: flex;
+  width: 680px;
+  min-height: 290px;
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Slide direction animation keyframes for seamless circular looping */
+.slideFromRight {
+  animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.slideFromLeft {
+  animation: slideInLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0.4;
+    transform: translateX(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.ticketInfo {
+  flex: 1.25;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+.ticketCategory {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.ticketCity {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ticketTitle {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.ticketSubtitle {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.ticketMeta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.ticketActions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ticketBookBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--color-primary);
+  color: #FFFFFF !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(10, 31, 68, 0.2);
+}
+
+.ticketBookBtn:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(10, 31, 68, 0.3);
+}
+
+.ticketDetailsLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.ticketDetailsLink:hover {
+  color: var(--color-primary);
+}
+
+/* Ticket Perforation Notch */
+.ticketPerforation {
+  position: relative;
+  width: 24px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notchTop,
+.notchBottom {
+  width: 24px;
+  height: 12px;
+  background: var(--color-primary-dark);
+  z-index: 2;
+}
+
+.notchTop {
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.notchBottom {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.perforatedLine {
+  width: 1px;
+  height: 80%;
+  border-left: 2px dashed #E2E8F0;
+}
+
+/* Ticket Image Area */
+.ticketImageWrapper {
+  flex: 1;
+  position: relative;
+  min-height: 100%;
+}
+
+.ticketImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageOverlayBadge {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: rgba(10, 31, 68, 0.88);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(4px);
+}
+
+/* Pagination & Mobile Row */
+.paginationRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.mobileNavBtn {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.2s ease;
+}
+
+.mobileNavBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dotIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dotIndicator:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.activeDot {
+  width: 28px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsiveness */
+@media (max-width: 990px) {
+  .sideCard {
+    display: none;
+  }
+  .navArrowLeft {
+    left: 10px;
+  }
+  .navArrowRight {
+    right: 10px;
+  }
+  .activeTicketCard {
+    width: 90%;
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 720px) {
+  .navArrow {
+    display: none;
+  }
+  .mobileNavBtn {
+    display: inline-flex;
+  }
+  .seasonDates {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .activeTicketCard {
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
+  }
+  .ticketImageWrapper {
+    height: 200px;
+    order: -1;
+  }
+  .ticketPerforation {
+    display: none;
+  }
+  .ticketInfo {
+    padding: 1.5rem;
+  }
+  .ticketTitle {
+    font-size: 1.35rem;
+  }
+}
