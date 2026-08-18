@@ -1,42 +1,334 @@
 .heroSection {
   position: relative;
   width: 100%;
-  background: #0A193D;
-  background: radial-gradient(circle at 50% 25%, #183B7E 0%, #0A193D 55%, #050E23 100%);
-  padding: 4.5rem 0 5rem 0;
+  min-height: 520px;
+  background-color: #FAFAFA;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+  user-select: none;
+}
+
+/* Atmospheric Blurred Dynamic Backdrop */
+.backdropContainer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.backdropImage {
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 120%;
+  height: 130%;
+  object-fit: cover;
+  filter: blur(55px) saturate(1.4) brightness(1.08);
+  opacity: 0.35;
+  transform: scale(1.08);
+  transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.backdropOverlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.85) 65%, #FFFFFF 100%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 60%, #FFFFFF 100%);
+}
+
+/* Main Hero Stage */
+.heroStage {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Nav Chevrons */
+.navArrow {
+  background: transparent;
+  border: none;
+  color: #1E293B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  z-index: 4;
+}
+
+.navArrow:hover {
+  color: #000000;
+  background: rgba(255, 255, 255, 0.75);
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navArrow:active {
+  transform: scale(0.95);
+}
+
+/* Content Grid: Left Info + Right Poster */
+.contentGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  min-height: 440px;
+}
+
+/* Slide Transition Animations */
+.slideInRight {
+  animation: fadeInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.slideInLeft {
+  animation: fadeInLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0.3;
+    transform: translateX(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0.3;
+    transform: translateX(-18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Left Info Column */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.eventTitle {
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+  margin-bottom: 0.85rem;
+}
+
+.tagline {
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.description {
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: clamp(0.9rem, 1.05vw, 0.98rem);
+  color: #374151;
+  line-height: 1.65;
+  max-width: 520px;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.heroBackdrop {
-  position: absolute;
-  inset: 0;
-  background-image: 
-    radial-gradient(rgba(56, 189, 248, 0.15) 1px, transparent 1px),
-    radial-gradient(rgba(37, 99, 235, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px, 20px 20px;
-  background-position: 0 0, 20px 20px;
-  opacity: 0.5;
-  pointer-events: none;
+/* Action Row & Button */
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.heroGlow {
-  position: absolute;
-  top: -120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 900px;
-  height: 450px;
-  background: radial-gradient(ellipse, rgba(56, 189, 248, 0.22) 0%, rgba(37, 99, 235, 0.12) 45%, transparent 70%);
-  pointer-events: none;
+.bookNowBtn {
+  background-color: #111827;
+  color: #FFFFFF;
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85rem 2.6rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.25);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.heroContainer {
+.bookNowBtn:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.bookNowBtn:active {
+  transform: translateY(0);
+}
+
+/* Right Poster Column */
+.posterCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posterCard {
   position: relative;
-  z-index: 2;
+  width: clamp(260px, 24vw, 340px);
+  height: clamp(380px, 34vw, 480px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #E2E8F0;
+}
+
+.posterCard:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 28px 55px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.posterImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.posterCard:hover .posterImg {
+  transform: scale(1.03);
+}
+
+/* Bottom Pagination Track */
+.paginationTrack {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+
+.pageDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #CBD5E1;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pageDot:hover {
+  background-color: #94A3B8;
+  transform: scale(1.2);
+}
+
+.activeDot {
+  width: 22px;
+  height: 5px;
+  border-radius: 999px;
+  background-color: #111827;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 960px) {
+  .contentGrid {
+    gap: 2rem;
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .posterCard {
+    width: 250px;
+    height: 360px;
+  }
 }
 
 @media (max-width: 768px) {
   .heroSection {
-    padding: 3rem 0 3.5rem 0;
+    padding: 2rem 1rem 2rem 1rem;
+    min-height: auto;
+  }
+
+  .heroStage {
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .navArrow {
+    display: none; /* Rely on touch swipe on mobile */
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .infoCol {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    order: 2;
+  }
+
+  .posterCol {
+    order: 1;
+  }
+
+  .posterCard {
+    width: 220px;
+    height: 310px;
+    border-radius: 16px;
+  }
+
+  .description {
+    text-align: center;
+    -webkit-line-clamp: 3;
+    margin-bottom: 1.5rem;
   }
 }

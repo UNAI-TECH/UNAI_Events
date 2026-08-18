@@ -1,5 +1,39 @@
 [
   {
+    "id": "unai-000",
+    "title": "Vishwanath and Sons",
+    "subtitle": "Only in Theatres",
+    "category": "Drama",
+    "genre": "Family",
+    "date": "2026-08-26",
+    "display_date": {
+      "month": "AUG",
+      "day": "26",
+      "time": "6:30 PM",
+      "year": "2026"
+    },
+    "time": "6:30 PM",
+    "duration": "148 Mins",
+    "language": "Tamil / Telugu / Hindi",
+    "age_limit": "UA16+",
+    "venue": "PVR INOX & City Theatres",
+    "city": "Chennai",
+    "price_starting": "₹250",
+    "image_url": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail_url": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80",
+    "bookmyshow_url": "https://in.bookmyshow.com",
+    "featured": true,
+    "hero_spotlight": true,
+    "status": "Booking Open",
+    "description": "Sanjay Vishwanath has spent decades chasing excellence as an international shooter. But as age, family responsibilities and an unexpected romance enter his life, he finds himself confronting a question bigger than ambition: what truly makes a life worth living?",
+    "highlights": ["Critics Choice Feature", "Dolby Atmos Surround", "Exclusive Director Q&A Premiere"],
+    "ticket_tiers": [
+      { "name": "Classic Stalls", "price": "₹250", "status": "Available" },
+      { "name": "Prime Recliner", "price": "₹450", "status": "Filling Fast" },
+      { "name": "Director's Box", "price": "₹850", "status": "Limited" }
+    ]
+  },
+  {
     "id": "unai-001",
     "title": "William Smith Comedy Show",
     "subtitle": "Crack a Smile — 2026 World Tour",
